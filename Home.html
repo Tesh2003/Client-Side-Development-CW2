@@ -21,7 +21,7 @@
         <div class="nav_bg">
         <nav>
             <ul>
-                <li><a href="splashScreen_ST1.html">Splash Screen</a></li>
+                <li><a href="splashScreen.html">Splash Screen</a></li>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="table.html">Table</a></li>
                 <li><a href="User_profile.html">Profile</a></li>
@@ -36,7 +36,7 @@
     <main class="content">
         <section class="mission">
             <h2>Our Mission</h2>
-            <p>Dedicated to preserving marine ecosystems, reducing pollution, and promoting sustainable ocean practices.</p>
+            <p>To safeguard the health of our oceans by combating pollution, protecting marine biodiversity, and encouraging sustainable practices that ensure a thriving marine environment for generations to come.</p>
         </section>
         <section class="content-sections">
             <div class="content-box"><h2>Endangered animals</h2><a href="endangered_animals.html"><img src="resources/images/turtle.png" alt="Content_1" class="content1"></a></div>
@@ -46,3 +46,17 @@
             
         </section>
     </main>
+
+<script>
+window.addEventListener('scroll', function () {
+    const title = document.querySelector('.title');
+    
+    if (window.scrollY > 50) {
+        title.style.opacity = "0";
+    } else {
+        title.style.opacity = "1";
+    }
+});
+</script>
+</body>
+</html>
