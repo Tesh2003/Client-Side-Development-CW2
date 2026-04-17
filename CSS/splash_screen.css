@@ -1,0 +1,119 @@
+/* Block scrolling on the entire page */
+html, body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;          
+    overflow: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1;
+}
+
+.glass-effect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 8, 118, 0.609);  /* Semi-transparent white background */
+    backdrop-filter: blur(13px);  /* Frosted glass effect */
+    z-index: -1; 
+}
+
+/* Splash Screen Styling */
+#heading {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#heading h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 20px;
+    line-height: 1.2;
+}
+
+#heading p {
+    font-family: "Aboreto", system-ui;
+    margin-top: 0px;
+    font-size: 1.3rem;
+}
+
+
+
+.mission{
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 320px;
+    max-width: 1100px;
+    font-size: 1.2rem;
+}
+
+
+table{
+    text-align: left;
+    color: #ffffff;
+    width: 75%;
+    margin-top: 100px;
+    margin-left: 250px;
+    border-collapse: collapse;
+    background-color: rgba(25, 0, 166, 0.289);
+    backdrop-filter: blur(10px);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+th {
+    background-color: #4C66AF;
+    color: white;
+}
+
+
+.dots {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce 3s infinite ease-in-out both;
+}
+
+.dots span:nth-child(1) { animation-delay: -0.32s; }
+.dots span:nth-child(2) { animation-delay: -0.16s; }
+.dots span:nth-child(3) { animation-delay: 0; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+    40% { transform: scale(1); opacity: 1; }
+}
