@@ -181,7 +181,6 @@ These opportunities not only help preserve biodiversity but also support sustain
     </div>
 
     <!-- Leave Review Section  -->
-      <body class="bg-light">
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -238,22 +237,22 @@ These opportunities not only help preserve biodiversity but also support sustain
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <label class="form-label">First Name</label>
-                      <input type="text" name="first_name" class="form-control" placeholder="Micheal">
+                      <input type="text" id="firstName" name="first_name" class="form-control" placeholder="Micheal">
                     </div>
                     <div class="col-md-6 mb-3">
                       <label class="form-label">Last Name</label>
-                      <input type="text" name="last_name" class="form-control" placeholder="Ajao-olarinoye">
+                      <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Ajao-olarinoye">
                     </div>
                   </div>
                   
                   <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="ajaoolarinoyemichael@yahoo.com">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="ajaoolarinoyemichael@yahoo.com">
                   </div>
                   
                   <div class="mb-4">
                     <label class="form-label">Message</label>
-                    <textarea class="form-control" name="message" rows="5" placeholder="Your message here..."></textarea>
+                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your message here..."></textarea>
                   </div>
 
                   <div class="form-check mb-3">
@@ -261,6 +260,8 @@ These opportunities not only help preserve biodiversity but also support sustain
                         <label class="form-check-label" for="subscribe">
                         Subscribe to our newsletter for updates
                         </label>
+
+                        <p id="subscribeStatus" style="margin-top:10px; font-weight:bold;"></p>
                   </div>
                   
                   <button type="submit" class="btn btn-submit text-white">Send Message</button>
@@ -275,6 +276,87 @@ These opportunities not only help preserve biodiversity but also support sustain
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<!--javascript validation-->
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!firstName || !lastName || !email || !message) {
+        e.preventDefault();
+        alert("Please fill all fields before submitting.");
+        return;
+    }
+
+    if (!email.includes("@")) {
+        e.preventDefault();
+        document.getElementById("emailError").innerText = "Please enter a valid email";
+        return;
+    }
+
+    alert("Form submitted successfully!");
+});
+</script>
+
+<!-- search functionality -->
+<script>
+document.querySelector(".search-btn").addEventListener("click", function() {
+    let value = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        if (text.includes(value)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
+<!-- dropdown functionality -->
+<script>
+document.getElementById("dropdown").addEventListener("change", function() {
+    let value = this.value;
+    let container = document.querySelector(".programms-1");
+
+    if (value === "Most Volunteered") {
+        container.style.border = "3px solid green";
+    }
+
+    if (value === "Trending") {
+        container.style.background = "rgba(255,255,255,0.3)";
+    }
+});
+</script>
+
+<script>
+// Load saved state when page opens
+window.addEventListener("load", function () {
+    let saved = localStorage.getItem("subscribed");
+
+    if (saved === "true") {
+        document.getElementById("subscribe").checked = true;
+        document.getElementById("subscribeStatus").innerText = "You are subscribed ✔";
+    }
+});
+
+// Save when checkbox changes
+document.getElementById("subscribe").addEventListener("change", function () {
+    if (this.checked) {
+        localStorage.setItem("subscribed", "true");
+        document.getElementById("subscribeStatus").innerText = "You are subscribed ✔";
+    } else {
+        localStorage.setItem("subscribed", "false");
+        document.getElementById("subscribeStatus").innerText = "Subscription removed ✖";
+    }
+});
+</script>
 </body>
 
 
