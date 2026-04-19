@@ -22,10 +22,9 @@ body, html {
     font-size: 25px;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    transition: opacity 0.4s ease-in-out;   /* Smooth fade */
+    transition: opacity 0.4s ease-in-out;
     z-index: 20;
 }
-
 
 nav {
     background: rgba(0, 0, 0, 0.5);
@@ -33,13 +32,13 @@ nav {
     height: 100px;
     align-items: center;
     display: flex;
-    justify-content: flex-end;   /* This pushes everything to the right */
+    justify-content: flex-end;
 }
 
 nav ul {
     list-style: none;
     padding: 10px 0;
-    margin: 0 0 0 100px; /* Moves nav items to the right */
+    margin: 0 0 0 100px;
     text-align: right;
 }
 
@@ -53,11 +52,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px; /* Increased font size */
+    font-size: 22px;
 }
 
 nav ul li a:hover {
-    color: #00ccff;               /* Nice hover effect */
+    color: #00ccff; 
 }
 
 main {
@@ -76,9 +75,9 @@ main {
     text-align: center;
     max-width: 900px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-size: 24px; /* Enlarged mission text */
+    font-size: 24px;
     font-weight: bold;
-    color: #dbd8d8; /* Changed font color */
+    color: #dbd8d8;
 }
 
 .content-sections {
@@ -105,9 +104,9 @@ main {
     cursor: pointer;
 }
 
-/* HOVER EFFECT */
+/* Cool Hover Effect */
 .content-box:hover {
-    transform: scale(1.1); /* Slightly enlarges */
+    transform: scale(1.1);
     box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2); /* Soft glowing effect */
     background: rgba(255, 255, 255, 0.2); /* Slightly brighter */
 }
