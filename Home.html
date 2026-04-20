@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="video-background">
+        <source src="resources/images/bg_2.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <a href="Home.html">
+            <img src="resources/images/turtle_logo_edit.PNG" alt="Logo" class="logo">
+        </a>
+        <h1 class="title"><b>Marine Guardians: Protecting Marine Life </b></h1>
+        
+        <div class="nav_bg">
+        <nav>
+            <ul>
+                <li><a href="splashScreen.html">Splash Screen</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="accomplishments.html">Accomplishments</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Team.html">Team</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <main class="content">
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>To safeguard the health of our oceans by combating pollution, protecting marine biodiversity, and encouraging sustainable practices that ensure a thriving marine environment for generations to come.</p>
+        </section>
+        <section class="content-sections">
+            <div class="content-box"><h2>Risk of Extinction</h2><a href="Risk_of_Extinction.html"><img src="resources/images/turtle.png" alt="Content_1" class="content1"></a></div>
+            <div class="content-box"><h2>Ocean Pollution & Its Effects</h2><a href="OceanPollutionandItsImpact.html"><img src="resources/images/marine_pollution.jpg" alt="Content_2" class="content1"></a></div>
+            <div class="content-box"><h2>Why Coral Reefs Matter</h2><a href="whycoralreefsmatter.html"><img src="resources/images/coral_reefs.jpg" alt="Content_3" class="content1"></a></div>
+            <div class="content-box"><h2>Fishing and Marine Conservation</h2><a href="FishingandMarineConservation.html"><img src="resources/images/sustainable_fishing.jpg" alt="Content_4" class="content1"></a></div></div>
+            
+        </section>
+    </main>
+
+<!-- JavaScript to hide the title on scroll thingy -->
+<script>
+window.addEventListener('scroll', function () {
+    const title = document.querySelector('.title');
+    
+    if (window.scrollY > 50) {
+        title.style.opacity = "0";
+    } else {
+        title.style.opacity = "1";
+    }
+});
+</script>
+</body>
+</html>
