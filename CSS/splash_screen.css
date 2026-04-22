@@ -91,20 +91,23 @@ th {
     color: white;
 }
 
-<!-- Animation for the loading dots -->
+/* Animation for the loading dots */
 .dots {
-    margin-top: 50px;
-    margin-left: 50px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .dots span {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: #3498db;
+    background-color: #ffffff;
     border-radius: 50%;
     animation: bounce 3s infinite ease-in-out both;
 }
